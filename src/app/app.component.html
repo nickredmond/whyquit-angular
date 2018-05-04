@@ -1,20 +1,69 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
-
+<!doctype HTML>
+<html>
+	<head>
+    <base href="/">
+		<!-- jQuery and Popper -->
+		<script
+			src="https://code.jquery.com/jquery-3.3.1.min.js"
+			integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+			crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+		<!-- Bootstrap minified source -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+		<!-- Fonts -->
+		<!-- <link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Gamja+Flower" rel="stylesheet"> -->
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:900|Source+Sans+Pro:700" rel="stylesheet">
+		<!-- Home page resources -->
+		<link rel="stylesheet" href="index.css">
+		<script type="text/javascript" src="environment.js"></script>
+		<script type="text/javascript" src="index.js"></script>
+		<!-- Icons, particularly social media -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/4.0.0-19/css/ionicons.min.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- <script>
+			$(function() {
+				$("#template").load("home/homepage.html", function() {
+					$.getScript("home/homepage.js");
+				});
+			});
+		</script> -->
+	</head>
+	<body>
+		<div id="sideNavigationBar">
+			<div id="sideNavigationContent">some test text</div>
+		</div>
+		<div id="mainContent">
+			<nav id="mainNavbar" class="navbar navbar-light">
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavMenu" 
+					aria-controls="mainNavMenu" aria-expanded="false" aria-label="Toggle navigation"
+					onclick="toggleNavigationMenu()">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+			</nav>
+			<div class="container">
+				<div class="row">
+					<div id="mainNavbarSpacingDiv"></div>
+					<div id="mainSiteLogo" class="col-sm-8">
+						<a class="logo-link" href="index.html">
+							<span class="logo-text title-text logo-text-bold">why</span>
+							<span class="logo-text title-text logo-text-secondary">quit</span>
+							<span class="logo-text title-text logo-text-blue">?</span>
+						</a>
+					</div>
+					<div id="whyquitLogoArea">
+						<div class="top-nav-wrapper">
+							<a class="circle-btn" href="http://whyquit.com" target="_blank"
+								title="whyquit.com">
+								<img id="whyquit-icon" />
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+      <!-- <div id="template"></div> -->
+      <router-outlet></router-outlet>
+		</div>
+	</body>
+</html>

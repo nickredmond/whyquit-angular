@@ -1,9 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { RouterModule, Routes } from '@angular/router';
 import { IndexComponent } from './index/index.component';
+import { TopStoryComponent } from './top-story/top-story.component';
+
+import { CarouselModule } from 'angular2-carousel';
 
 const appRoutes: Routes = [
   { path: 'index', component: IndexComponent },
@@ -14,10 +18,13 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    IndexComponent
+    IndexComponent,
+    TopStoryComponent,
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
+    CarouselModule,
     RouterModule.forRoot(
       appRoutes,
       { enableTracing: true } // debugging only

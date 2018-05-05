@@ -20,6 +20,7 @@
     "@angular/platform-browser": "^6.0.0",
     "@angular/platform-browser-dynamic": "^6.0.0",
     "@angular/router": "^6.0.0",
+    "@ng-bootstrap/ng-bootstrap": "^2.0.0",
     "@types/hammerjs": "^2.0.35",
     "angular2-carousel": "^1.0.13",
     "core-js": "^2.5.4",

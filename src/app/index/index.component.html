@@ -1,10 +1,9 @@
 
     <div class="container-fluid">
-        <div id="topStoriesCarousel" class="carousel slide" data-ride="carousel">
+        <!-- <div id="topStoriesCarousel" class="carousel slide" data-ride="carousel">
             <ol id="tobaccoDeathsCarouselIndicators" class="carousel-indicators">
               <li *ngFor="let topStory of topStories; let i = index" data-target="#tobaccoDeathsCarouselIndicators"
-                [class]="getIndicatorClass(i)"></li>
-                <!-- data-slide-to="{{ i }}"></li> -->
+                [class]="getIndicatorClass(i)" data-slide-to="{{ i }}"></li>
             </ol>
             <div id="slidesContainer" class="carousel-inner">
               <div *ngFor="let topStory of topStories; let i = index" [class]="getCarouselItemClass(i)">
@@ -20,7 +19,35 @@
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="sr-only">Next</span>
             </a>
-        </div>
+        </div> -->
+
+
+
+        <!-- <ngb-carousel>
+            <ng-template ngbSlide *ngFor="let topStory of topStories">
+              <img src="http://localhost:3000/whyquit/images/law-of-addiction.png" alt="Random first slide">
+              <div class="carousel-caption">
+                <h3>First slide label</h3>
+                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+              </div>
+            </ng-template>
+            <ng-template ngbSlide>
+              <img [src]="images[1]" alt="Random second slide">
+              <div class="carousel-caption">
+                <h3>Second slide label</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </div>
+            </ng-template>
+            <ng-template ngbSlide>
+              <img [src]="images[2]" alt="Random third slide">
+              <div class="carousel-caption">
+                <h3>Third slide label</h3>
+                <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+              </div>
+            </ng-template>
+          </ngb-carousel> -->
+
+          <ngbd-carousel [topStories]="topStories"></ngbd-carousel>
     </div>
     <!-- <div class="container">
         <ul id="secondaryStoriesList" class="list-group list-group-flush"></ul>

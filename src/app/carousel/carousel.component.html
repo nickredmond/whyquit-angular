@@ -1,0 +1,10 @@
+<ngb-carousel>
+    <ng-template ngbSlide *ngFor="let topStory of topStories">
+        <img [src]="getImageSource(topStory)" alt="Random first slide">
+        <div class="carousel-caption">
+            <h5>{{ topStory.title }}</h5>
+            <!-- <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p> -->
+        </div>
+    </ng-template>
+</ngb-carousel>
+      

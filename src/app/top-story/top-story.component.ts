@@ -1,8 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { environment } from '../../environments/environment';
 
-declare var $: any;
-
 @Component({
   selector: 'app-top-story',
   templateUrl: './top-story.component.html',

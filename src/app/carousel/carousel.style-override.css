@@ -1,0 +1,35 @@
+.carousel.slide:focus {
+    outline: none !important;
+}
+.carousel-inner:focus {
+    outline: none !important;
+}
+.carousel-inner img {
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+}
+
+.carousel-item {
+    text-align: center;
+}
+
+ngb-carousel a[role=button] span {
+    background-color: white;
+    width: 2em;
+    height: 2em;
+    border-radius: 1em;
+}
+#topStoriesCarouselElement .carousel-control-prev-icon {
+    background-image: url("../../assets/left-arrow.png");
+}
+#topStoriesCarouselElement .carousel-control-next-icon {
+    background-image: url("../../assets/right-arrow.png");
+}
+
+.carousel-caption {
+    text-shadow: -1px 0 #555, 0 1px #555, 1px 0 #555, 0 -1px #555;
+}

@@ -23,7 +23,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/third-party/bootstrap-4-1-0.min.css",
+              "src/styles.css",
+              "src/app/carousel/carousel.style-override.css"
             ],
             "scripts": []
           },

@@ -4,8 +4,8 @@ import {map} from 'rxjs/operators';
 import { TopStory } from '../shared/TopStory';
 import {environment} from '../../environments/environment';
 
-@Component({selector: 'ngbd-carousel', templateUrl: './carousel.component.html'})
-export class NgbdCarousel implements OnInit {
+@Component({selector: 'top-stories-carousel', templateUrl: './top-stories-carousel.component.html'})
+export class TopStoriesCarousel implements OnInit {
   @Input() topStories: TopStory[];
 
   constructor(private _http: HttpClient) {}

@@ -9,7 +9,7 @@ import { IndexComponent } from './index/index.component';
 import { TopStoryComponent } from './top-story/top-story.component';
 
 import { CarouselModule } from 'angular2-carousel';
-import { NgbdCarousel } from './carousel/carousel.component';
+import { TopStoriesCarousel } from './carousel/top-stories-carousel.component';
 
 const appRoutes: Routes = [
   { path: 'index', component: IndexComponent },
@@ -22,7 +22,7 @@ const appRoutes: Routes = [
     AppComponent,
     IndexComponent,
     TopStoryComponent,
-    NgbdCarousel
+    TopStoriesCarousel
   ],
   imports: [
     BrowserModule,

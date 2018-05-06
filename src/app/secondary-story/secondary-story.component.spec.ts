@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TopStoryComponent } from './top-story.component';
+import { SecondaryStoryComponent } from './secondary-story.component';
 
-describe('TopStoryComponent', () => {
-  let component: TopStoryComponent;
-  let fixture: ComponentFixture<TopStoryComponent>;
+describe('SecondaryStoryComponent', () => {
+  let component: SecondaryStoryComponent;
+  let fixture: ComponentFixture<SecondaryStoryComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TopStoryComponent ]
+      declarations: [ SecondaryStoryComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TopStoryComponent);
+    fixture = TestBed.createComponent(SecondaryStoryComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

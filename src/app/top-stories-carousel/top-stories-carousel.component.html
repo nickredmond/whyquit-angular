@@ -1,0 +1,11 @@
+<ngb-carousel id="topStoriesCarouselElement">
+    <ng-template ngbSlide *ngFor="let topStory of topStories">
+        <a id="topStoryLink" [href]="topStory.linkAddress" target="_blank">
+            <img [src]="getImageSource(topStory)" (load)="setImageMaxSize($event.srcElement)" [alt]="topStory.title">
+            <div class="carousel-caption">
+                <h5>{{ topStory.title }}</h5>
+            </div>
+        </a>
+    </ng-template>
+</ngb-carousel>
+      

@@ -49,6 +49,13 @@
 
           <top-stories-carousel id="topStoriesCarousel" [topStories]="topStories"></top-stories-carousel>
     </div>
+    <div class="container">
+        <ul id="secondaryStoriesList" class="list-group list-group-flush">
+          <secondary-story *ngFor="let secondaryStory of secondaryStories"
+            [title]="secondaryStory.title" [description]="secondaryStory.description" [linkAddress]="secondaryStory.linkAddress">
+          </secondary-story>
+        </ul>
+    </div>
     <!-- <div class="container">
         <ul id="secondaryStoriesList" class="list-group list-group-flush"></ul>
     </div>

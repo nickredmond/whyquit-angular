@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { WhyQuitService } from '../services/why-quit/why-quit.service';
 import { TopStory } from '../shared/TopStory';
+import { SecondaryStory } from '../shared/SecondaryStory';
 
 @Component({
   selector: 'app-index',
@@ -10,19 +11,24 @@ import { TopStory } from '../shared/TopStory';
 })
 export class IndexComponent implements OnInit {
   topStories: TopStory[];
+  secondaryStories: SecondaryStory[];
 
   constructor(private whyQuitService: WhyQuitService) { }
 
   ngOnInit() {
     this.getTopStories();
-    //this.getTopStories(addTopStoriesToPage);
-    // this.getSecondaryStories(addSecondaryStoriesToPage);
+    this.getSecondaryStories();
     // this.getTooYoungCardsInfo(populateTooYoungCards);
   }
 
   getTopStories(): void {
     this.whyQuitService.getTopStories()
       .subscribe(topStories => this.topStories = topStories);
+  }
+
+  getSecondaryStories(): void {
+    this.whyQuitService.getSecondaryStories()
+      .subscribe(secondaryStories => this.secondaryStories = secondaryStories);
   }
 
   getCarouselItemClass(itemIndex: number): string {

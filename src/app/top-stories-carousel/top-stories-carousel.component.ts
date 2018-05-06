@@ -20,7 +20,9 @@ export class TopStoriesCarousel implements OnInit {
 
   setImageMaxSize(imageElement: HTMLImageElement) {
     let maxCarouselHeight = this.getMaxCarouselHeight();
-    imageElement.style.maxHeight = maxCarouselHeight + "px";
+    let captionHeight = document.getElementsByClassName("carousel-caption")[0].clientHeight;
+    let maxImageHeight = maxCarouselHeight - captionHeight;    
+    imageElement.style.maxHeight = maxImageHeight + "px";
 
     let scalingFactor = maxCarouselHeight / imageElement.naturalHeight;
     imageElement.style.maxWidth = (imageElement.naturalWidth * scalingFactor) + "px";

@@ -6,10 +6,10 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppComponent } from './app.component';
 import { RouterModule, Routes } from '@angular/router';
 import { IndexComponent } from './index/index.component';
-import { TopStoryComponent } from './top-story/top-story.component';
 
 import { CarouselModule } from 'angular2-carousel';
-import { TopStoriesCarousel } from './carousel/top-stories-carousel.component';
+import { TopStoriesCarousel } from './top-stories-carousel/top-stories-carousel.component';
+import { SecondaryStoryComponent } from './secondary-story/secondary-story.component';
 
 const appRoutes: Routes = [
   { path: 'index', component: IndexComponent },
@@ -21,8 +21,8 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     IndexComponent,
-    TopStoryComponent,
-    TopStoriesCarousel
+    TopStoriesCarousel,
+    SecondaryStoryComponent
   ],
   imports: [
     BrowserModule,

@@ -56,6 +56,15 @@
           </secondary-story>
         </ul>
     </div>
+    <div id="diedTooYoungContainer" class="container-fluid">
+        <div id="diedTooYoungHeader">
+            <span class="title-text">they died too young...</span>
+        </div>
+        <div *ngFor="let rowNumber of getVictimCardRowNumbers()" class="row image-cards-row w-75">
+            <victim-card *ngFor="let victim of getVictimsForRow(rowNumber)"
+                [name]="victim.name" [age]="victim.age" [imageFilename]="victim.imageFilename" [linkAddress]="victim.linkAddress"></victim-card>
+        </div>
+    </div>
     <!-- <div class="container">
         <ul id="secondaryStoriesList" class="list-group list-group-flush"></ul>
     </div>

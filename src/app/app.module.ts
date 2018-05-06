@@ -10,6 +10,7 @@ import { IndexComponent } from './index/index.component';
 import { CarouselModule } from 'angular2-carousel';
 import { TopStoriesCarousel } from './top-stories-carousel/top-stories-carousel.component';
 import { SecondaryStoryComponent } from './secondary-story/secondary-story.component';
+import { VictimCardComponent } from './victim-card/victim-card.component';
 
 const appRoutes: Routes = [
   { path: 'index', component: IndexComponent },
@@ -22,7 +23,8 @@ const appRoutes: Routes = [
     AppComponent,
     IndexComponent,
     TopStoriesCarousel,
-    SecondaryStoryComponent
+    SecondaryStoryComponent,
+    VictimCardComponent,
   ],
   imports: [
     BrowserModule,

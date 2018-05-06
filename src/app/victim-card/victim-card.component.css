@@ -1,0 +1,17 @@
+.victim-card {
+	padding-top: 0.5em;
+}
+.victim-card:hover {
+	background-color: #4b7ce0;
+}
+
+.image-card-title {
+	text-align: center;
+}
+.image-card-title p {
+	margin: 0;
+	color: white;
+}
+.image-card-title-text {
+	font-size: 1.25em;
+}

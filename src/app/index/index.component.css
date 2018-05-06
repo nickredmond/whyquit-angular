@@ -1,0 +1,18 @@
+#diedTooYoungContainer {
+	background-color: #2352AD;
+	padding-bottom: 0.5em;
+}
+#diedTooYoungHeader {
+	font-family: 'Source Sans Pro', sans-serif;
+	/* font-family: "Gamja Flower", cursive; */
+    font-size: 2em;
+    color: #eee;
+	max-width: 10em;
+	padding-top: 0.5em;
+	margin: 0.5em auto 0 auto;
+}
+
+.image-cards-row {
+	margin: 0 auto 1em auto;
+	max-width: 600px;
+}

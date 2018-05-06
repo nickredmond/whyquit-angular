@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { WhyQuitService } from '../services/why-quit/why-quit.service';
 import { TopStory } from '../shared/TopStory';
 import { SecondaryStory } from '../shared/SecondaryStory';
+import { Victim } from '../shared/Victim';
 
 @Component({
   selector: 'app-index',
@@ -10,35 +11,52 @@ import { SecondaryStory } from '../shared/SecondaryStory';
   styleUrls: ['./index.component.css']
 })
 export class IndexComponent implements OnInit {
+  VICTIM_CARDS_PER_ROW: number;
+
   topStories: TopStory[];
   secondaryStories: SecondaryStory[];
+  victims: Victim[];
 
-  constructor(private whyQuitService: WhyQuitService) { }
+  constructor(private whyQuitService: WhyQuitService) {
+    this.VICTIM_CARDS_PER_ROW = 3;
+    this.victims = [];
+  }
 
   ngOnInit() {
     this.getTopStories();
     this.getSecondaryStories();
-    // this.getTooYoungCardsInfo(populateTooYoungCards);
+    this.getVictimCardsInfo();
   }
 
-  getTopStories(): void {
+  getVictimCardRowNumbers(): number[] {
+    let numberOfRows = Math.ceil(this.victims.length / this.VICTIM_CARDS_PER_ROW);
+    let rowNumbers = Array(numberOfRows);
+    for (var i = 0; i < numberOfRows; i++) {
+      rowNumbers[i] = (i + 1);
+    }
+
+    return rowNumbers;
+  }
+
+  getVictimsForRow(rowNumber: number): Victim[] {
+    let victimsAlreadyDisplayed = this.VICTIM_CARDS_PER_ROW * (rowNumber - 1);
+    let numberOfVictimsInRow = Math.min(this.VICTIM_CARDS_PER_ROW, this.victims.length - victimsAlreadyDisplayed);
+    return this.victims.slice(victimsAlreadyDisplayed, victimsAlreadyDisplayed + numberOfVictimsInRow);
+  }
+
+  private getTopStories(): void {
     this.whyQuitService.getTopStories()
       .subscribe(topStories => this.topStories = topStories);
   }
 
-  getSecondaryStories(): void {
+  private getSecondaryStories(): void {
     this.whyQuitService.getSecondaryStories()
       .subscribe(secondaryStories => this.secondaryStories = secondaryStories);
   }
 
-  getCarouselItemClass(itemIndex: number): string {
-    let isFirstItem = (itemIndex === 0);
-    return "item-carousel" + (isFirstItem ? " active" : ""); //"carousel-item" + (isFirstItem ? " active" : "");
-  }
-
-  getIndicatorClass(indicatorIndex: number): string {
-    let isFirstItem = (indicatorIndex === 0);
-    return (isFirstItem ? "active" : "");
+  private getVictimCardsInfo(): void {
+     this.whyQuitService.getVictimCardsInfo()
+      .subscribe(victims => this.victims = victims);
   }
 
 //   getSecondaryStories(onSecondaryStoriesReturned) {

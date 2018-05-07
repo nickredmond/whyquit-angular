@@ -4,7 +4,6 @@
 }
 #diedTooYoungHeader {
 	font-family: 'Source Sans Pro', sans-serif;
-	/* font-family: "Gamja Flower", cursive; */
     font-size: 2em;
     color: #eee;
 	max-width: 10em;
@@ -15,4 +14,74 @@
 .image-cards-row {
 	margin: 0 auto 1em auto;
 	max-width: 600px;
+}
+
+.victim-card {
+	padding-top: 0.5em;
+}
+.victim-card:hover {
+	background-color: #4b7ce0;
+}
+
+#socialLogosArea {
+	font-size: 2.5em;
+	min-width: 250px;
+}
+.social-link {
+	padding: 0.25em;
+	cursor: pointer;
+	color: black;
+}
+.social-link:hover {
+	color: #007bff !important;
+}
+.social-link:visited {
+	color: black;
+}
+
+#footerContainer {
+	margin-top: 1em;
+}
+.footer-row {
+	margin: 0 auto;
+	text-align: center;
+}
+#footerLinks {
+	padding: 0.25em 0 1em 0;
+}
+#footerLinks p {
+	margin-bottom: 0;
+}
+
+.category-card {
+	color: #484848;
+}
+.category-card-header {
+	font-weight: bold;
+    font-size: 1.25em;
+}
+.category-card > hr {
+	margin: 0 0 0.5em 0;
+}
+.left-category-card {
+	margin-left: auto;
+}
+.right-category-card {
+	margin-right: auto;
+}
+
+.category-card-list {
+	padding: 0;
+	margin-bottom: 0;
+}
+.category-card-list > li {
+	list-style: none;
+}
+
+.category-card-link {
+	color: black;
+}
+
+#categoriesContainer {
+	padding-top: 0.5em;
 }

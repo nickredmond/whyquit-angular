@@ -12,8 +12,11 @@ import { TopStoriesCarousel } from './top-stories-carousel/top-stories-carousel.
 import { SecondaryStoryComponent } from './secondary-story/secondary-story.component';
 import { VictimCardComponent } from './victim-card/victim-card.component';
 
+import { EducationComponent } from './education/education.component';
+
 const appRoutes: Routes = [
   { path: 'index', component: IndexComponent },
+  { path: 'education', component: EducationComponent },
   { path: '', redirectTo: '/index', pathMatch: 'full' },
   // { path: '**', component: PageNotFoundComponent }
 ];
@@ -25,6 +28,7 @@ const appRoutes: Routes = [
     TopStoriesCarousel,
     SecondaryStoryComponent,
     VictimCardComponent,
+    EducationComponent,
   ],
   imports: [
     BrowserModule,

@@ -32,13 +32,15 @@
 	</head>
 	<body>
 		<div id="sideNavigationBar">
-			<div id="sideNavigationContent">some test text</div>
+			<div id="sideNavigationContent">
+				<div><a href="/education">Education</a></div>
+			</div>
 		</div>
 		<div id="mainContent">
 			<nav id="mainNavbar" class="navbar navbar-light">
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavMenu" 
 					aria-controls="mainNavMenu" aria-expanded="false" aria-label="Toggle navigation"
-					onclick="toggleNavigationMenu()">
+					(click)="toggleNavigationMenu()">
 					<span class="navbar-toggler-icon"></span>
 				</button>
 			</nav>
@@ -56,7 +58,7 @@
 						<div class="top-nav-wrapper">
 							<a class="circle-btn" href="http://whyquit.com" target="_blank"
 								title="whyquit.com">
-								<img id="whyquit-icon" />
+								<img id="whyquit-icon" [src]="whyquitIconSrc" />
 							</a>
 						</div>
 					</div>

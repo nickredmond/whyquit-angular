@@ -18,7 +18,6 @@ export class VictimCardComponent implements OnInit {
   }
 
   getImageSource(): string {
-    console.log("victim ", this.name, this.age, this.imageFilename, this.linkAddress);
     return environment.apiUrl + 'whyquit/images/too-young/' + this.imageFilename;
   }
 }

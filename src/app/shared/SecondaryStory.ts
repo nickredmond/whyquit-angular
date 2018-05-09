@@ -1,5 +1,3 @@
-import { Story } from "./Story";
+import { ListingViewItem } from "./ListingViewItem";
 
-export class SecondaryStory extends Story {
-    description: string;
-}
+export class SecondaryStory extends ListingViewItem { }

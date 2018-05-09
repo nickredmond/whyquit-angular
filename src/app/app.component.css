@@ -1,7 +1,3 @@
-/* body {
-	background-color: #EEE;
-} */
-
 #mainSiteLogo {
 	text-align: center;
 	margin: 0 auto;
@@ -9,10 +5,8 @@
 	padding: 0;
 }
 .site-logo-area {
-	/* max-width: 14em; */
 	cursor: pointer;
 	font-family: 'Montserrat', sans-serif;
-	/* font-family: 'Fredoka One', cursive; */
 	margin: 0 auto 1em auto;
 }
 #whyquitLogoArea {
@@ -37,78 +31,6 @@
 .logo-link:hover {
 	text-decoration: none;
 	color: #007bff;
-}
-
-#topStoriesCarousel {
-	background-color: #eee;
-}
-.carousel-image {
-	display: block;
-	margin: 0 auto 0.5em auto;
-}
-.top-story-caption-block {
-	margin-left: auto;
-    margin-right: auto;
-}
-.top-story-caption-block > h5 {
-	text-align: center;
-	color: #555;
-}
-
-.carousel-indicators li {
-	background-color: #999;
-	background-color: rgba(70,70,70,.25);
-}
-
-.carousel-indicators .active {
-	background-color: #444;
-}
-
-/* from https://stackoverflow.com/questions/46249541/change-arrow-colors-in-bootstraps-carousel */
-.carousel-control-prev-icon {
-	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='444' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
-}
-.carousel-control-next-icon {
-	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='444' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
-}
-
-#tobaccoDeathsCarouselIndicators {
-	padding-bottom: 0.75em;
-}
-
-#diedTooYoungContainer {
-	background-color: #2352AD;
-	padding-bottom: 0.5em;
-}
-#diedTooYoungHeader {
-	font-family: 'Source Sans Pro', sans-serif;
-	/* font-family: "Gamja Flower", cursive; */
-    font-size: 2em;
-    color: #eee;
-	max-width: 10em;
-	padding-top: 0.5em;
-	margin: 0.5em auto 0 auto;
-}
-.image-cards-row {
-	margin: 0 auto 1em auto;
-	max-width: 600px;
-}
-.image-cards-row > div {
-	padding-top: 0.5em;
-}
-.image-cards-row > div:hover {
-	background-color: #4b7ce0;
-}
-
-.image-card-title {
-	text-align: center;
-}
-.image-card-title p {
-	margin: 0;
-	color: white;
-}
-.image-card-title-text {
-	font-size: 1.25em;
 }
 
 #mainNavbar {
@@ -147,39 +69,6 @@
 .top-nav-wrapper {
 	margin: 0 auto;
 	max-width: 5em;
-}
-
-.category-card {
-	color: #484848;
-}
-.category-card-header {
-	font-weight: bold;
-    font-size: 1.25em;
-}
-.category-card > hr {
-	margin: 0 0 0.5em 0;
-}
-.left-category-card {
-	margin-left: auto;
-}
-.right-category-card {
-	margin-right: auto;
-}
-
-.category-card-list {
-	padding: 0;
-	margin-bottom: 0;
-}
-.category-card-list > li {
-	list-style: none;
-}
-
-.category-card-link {
-	color: black;
-}
-
-#categoriesContainer {
-	padding-top: 0.5em;
 }
 
 #socialLogosArea {
@@ -229,8 +118,12 @@
     color: white;
     width: 250px;
 }
+#sideNavigationContent div {
+	margin: 0.5em 0 0 0.5em;
+}
 #sideNavigationContent a {
 	color: white;
+	font-weight: bold;
 	font-size: 1.5em;
 }
 

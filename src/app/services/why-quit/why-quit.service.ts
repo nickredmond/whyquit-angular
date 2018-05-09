@@ -5,6 +5,7 @@ import { Observable, Observer } from 'rxjs';
 import { environment } from '../../../environments/environment';
 import { SecondaryStory } from '../../shared/SecondaryStory';
 import { Victim } from '../../shared/Victim';
+import { EducationStory } from '../../shared/EducationStory';
 
 @Injectable({
   providedIn: 'root'
@@ -25,6 +26,10 @@ export class WhyQuitService {
     return this.http.get<Victim[]>(this.getVictimCardsInfoPath());
   }
 
+  getEducationStories(): Observable<EducationStory[]> {
+    return this.http.get<EducationStory[]>(this.getEducationStoriesPath());
+  }
+
   private getTopStoriesPath(): string {
     return environment.apiUrl + 'whyquit/top-stories';
   }
@@ -35,5 +40,9 @@ export class WhyQuitService {
 
   private getVictimCardsInfoPath(): string {
     return environment.apiUrl + 'whyquit/too-young';
+  }
+
+  private getEducationStoriesPath(): string {
+    return environment.apiUrl + 'whyquit/education';
   }
 }

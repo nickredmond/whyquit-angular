@@ -13,6 +13,7 @@ import { SecondaryStoryComponent } from './secondary-story/secondary-story.compo
 import { VictimCardComponent } from './victim-card/victim-card.component';
 
 import { EducationComponent } from './education/education.component';
+import { ListingViewComponent } from './listing-view/listing-view.component';
 
 const appRoutes: Routes = [
   { path: 'index', component: IndexComponent },
@@ -29,6 +30,7 @@ const appRoutes: Routes = [
     SecondaryStoryComponent,
     VictimCardComponent,
     EducationComponent,
+    ListingViewComponent
   ],
   imports: [
     BrowserModule,

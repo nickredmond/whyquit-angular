@@ -23,42 +23,13 @@
 	background-color: #4b7ce0;
 }
 
-#socialLogosArea {
-	font-size: 2.5em;
-	min-width: 250px;
-}
-.social-link {
-	padding: 0.25em;
-	cursor: pointer;
-	color: black;
-}
-.social-link:hover {
-	color: #007bff !important;
-}
-.social-link:visited {
-	color: black;
-}
-
-#footerContainer {
-	margin-top: 1em;
-}
-.footer-row {
-	margin: 0 auto;
-	text-align: center;
-}
-#footerLinks {
-	padding: 0.25em 0 1em 0;
-}
-#footerLinks p {
-	margin-bottom: 0;
-}
-
 .category-card {
 	color: #484848;
 }
 .category-card-header {
 	font-weight: bold;
-    font-size: 1.25em;
+	font-size: 1.25em;
+	color: #484848;
 }
 .category-card > hr {
 	margin: 0 0 0.5em 0;

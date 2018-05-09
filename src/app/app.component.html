@@ -33,6 +33,7 @@
 	<body>
 		<div id="sideNavigationBar">
 			<div id="sideNavigationContent">
+				<div><a href="/index">Home</a></div>
 				<div><a href="/education">Education</a></div>
 			</div>
 		</div>
@@ -64,8 +65,23 @@
 					</div>
 				</div>
 			</div>
-      <!-- <div id="template"></div> -->
-      <router-outlet></router-outlet>
+			<!-- Individual page content in "router-outlet" -->
+			<router-outlet></router-outlet>
+			<div id="footerContainer" class="container">
+				<div class="row">
+					<div id="socialLogosArea" class="footer-row col-sm-4">
+						<a class="social-link ion-logo-facebook" href="https://www.facebook.com/pages/Whyquitcom/108132829380969" target="_blank"></a>
+						<a class="social-link ion-logo-twitter" href="https://twitter.com/whyquit_com" target="_blank"></a>
+						<a class="social-link ion-logo-youtube" href="http://www.youtube.com/user/joelspitz/featured" target="_blank"></a>
+					</div>
+				</div>
+				<div id="footerLinks" class="row">
+					<div class="footer-row col-sm-4">
+						<p><a href="http://whyquit.com/ContactUs.html" target="_blank">Contact WhyQuit</a></p>
+						<p><a href="http://whyquit.com/Privacy.html" target="_blank">Privacy</a></p>
+					</div>
+				</div>
+			</div>
 		</div>
 	</body>
 </html>

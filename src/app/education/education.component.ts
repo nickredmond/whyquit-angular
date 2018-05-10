@@ -13,6 +13,7 @@ export class EducationComponent implements OnInit {
   constructor(private whyQuitService: WhyQuitService) { }
 
   ngOnInit() {
+    this.getEducationStories();
   }
 
   private getEducationStories() {

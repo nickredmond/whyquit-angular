@@ -1,0 +1,31 @@
+<ng-template #content let-c="close" let-d="dismiss">
+    <div class="modal-header">
+      <h4 class="modal-title">DISCLAIMER</h4>
+      <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <p>The content of this site is not managed by WhyQuit, and the author of this site has no 
+        intention of using the reserved "WhyQuit" name for any commercial purposes. Additionally, any 
+        content used by this site is borrowed and is not intended to represent the official views of 
+        <a href="http://whyquit.com" target="_blank">http://whyquit.com</a>. 
+      </p>
+      <p><strong>NOTE:</strong>&nbsp;If you see this disclaimer notice, then the website found at 
+        https://whyquit-responsive.herokuapp.com is only being used as proof-of-concept for responsive 
+        Web design, and the content of this site is being used without explicit permission of WhyQuit. 
+        Furthermore, this website may become unavailable if permission to use content found at http://whyquit.com 
+        is denied by official WhyQuit representatives.
+      </p>
+      <p>In any case, this website is produced and maintained by an individual who has become determined to 
+        quit smoking, and their intentions reflect only a desire to help others' efforts to quit.
+      </p>
+    </div>
+    <div class="modal-footer">
+      <div id="ignoreModalCheckboxArea" class="form-group form-check">
+          <input type="checkbox" id="isModalIgnoredCheckbox" class="form-check-input" (change)="isModalIgnoreSelected = !isModalIgnoreSelected">
+          <label class="form-check-label" for="isModalIgnoredCheckbox">Don't show this again</label>
+      </div>
+      <button type="button" class="btn btn-outline-dark" (click)="c('Close click')">Close</button>
+    </div>
+  </ng-template>

@@ -14,6 +14,7 @@ import { VictimCardComponent } from './victim-card/victim-card.component';
 
 import { EducationComponent } from './education/education.component';
 import { StoryCardComponent } from './story-card/story-card.component';
+import { DisclaimerModalComponent } from './disclaimer-modal/disclaimer-modal.component';
 
 const appRoutes: Routes = [
   { path: 'index', component: IndexComponent },
@@ -30,7 +31,8 @@ const appRoutes: Routes = [
     SecondaryStoryComponent,
     VictimCardComponent,
     EducationComponent,
-    StoryCardComponent
+    StoryCardComponent,
+    DisclaimerModalComponent
   ],
   imports: [
     BrowserModule,

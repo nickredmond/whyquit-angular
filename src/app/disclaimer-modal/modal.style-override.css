@@ -1,0 +1,10 @@
+.modal-header {
+    background-color: #eee;
+}
+
+@media (min-width: 576px) {
+    .modal-dialog {
+        max-width: 830px;
+        width: 75% !important;
+    }
+}

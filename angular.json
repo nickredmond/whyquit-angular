@@ -25,7 +25,8 @@
             "styles": [
               "src/third-party/bootstrap-4-1-0.min.css",
               "src/styles.css",
-              "src/app/top-stories-carousel/carousel.style-override.css"
+              "src/app/top-stories-carousel/carousel.style-override.css",
+              "src/app/disclaimer-modal/modal.style-override.css"
             ],
             "scripts": []
           },

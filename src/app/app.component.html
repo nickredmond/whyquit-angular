@@ -6,13 +6,13 @@
 		<!-- Icons, particularly social media -->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/4.0.0-19/css/ionicons.min.css">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' http://* 'unsafe-inline'; script-src 'self' http://* 'unsafe-inline' 'unsafe-eval'" />
 	</head>
 	<body>
 		<div id="sideNavigationBar">
 			<div id="sideNavigationContent">
-				<div><a href="/index">Home</a></div>
-				<div><a href="/education">Education</a></div>
+				<div *ngFor="let navigationLink of navigationLinks">
+					<a [routerLink]="navigationLink.path" (click)="closeNavigationMenu()">{{ navigationLink.linkText }}</a>
+				</div>
 			</div>
 		</div>
 		<div id="mainContent">
@@ -27,7 +27,7 @@
 				<div class="row">
 					<div id="mainNavbarSpacingDiv"></div>
 					<div id="mainSiteLogo" class="col-sm-8">
-						<a class="logo-link" href="index.html">
+						<a class="logo-link" routerLink="/index" (click)="closeNavigationMenu()">
 							<span class="logo-text title-text logo-text-bold">why</span>
 							<span class="logo-text title-text logo-text-secondary">quit</span>
 							<span class="logo-text title-text logo-text-blue">?</span>

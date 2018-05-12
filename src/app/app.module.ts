@@ -18,7 +18,7 @@ import { StoryCardComponent } from './story-card/story-card.component';
 const appRoutes: Routes = [
   { path: 'index', component: IndexComponent },
   { path: 'education', component: EducationComponent },
-  { path: '', redirectTo: '/index', pathMatch: 'full' },
+  { path: '', redirectTo: 'index', pathMatch: 'full' },
   // { path: '**', component: PageNotFoundComponent }
 ];
 
@@ -39,7 +39,8 @@ const appRoutes: Routes = [
     NgbModule.forRoot(),
     RouterModule.forRoot(
       appRoutes,
-      { enableTracing: true } // debugging only
+      { onSameUrlNavigation: "reload" }
+      // { enableTracing: true } // debugging only
     )
   ],
   providers: [],

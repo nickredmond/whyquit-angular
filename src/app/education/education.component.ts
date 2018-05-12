@@ -22,7 +22,7 @@ export class EducationComponent implements OnInit {
   }
 
   private getEducationStories() {
-    this.whyQuitService.getEducationStories()
+    this.whyQuitService.getEducationStories(1, 100)
       .subscribe(educationStories => this.educationStories = educationStories);
   }
 }

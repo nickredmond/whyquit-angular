@@ -1,6 +1,5 @@
-<p>Edumacation and Stuff</p>
-<!-- <listing-view [viewItems]="educationStories"></listing-view> -->
-<div class="container">
+<div id="educationContainer" class="container">
+    <h2 id="educationHeader">Education</h2>
     <div class="card-columns">
       <story-card *ngFor="let educationStory of educationStories"
         [title]="educationStory.title" [description]="educationStory.description" 

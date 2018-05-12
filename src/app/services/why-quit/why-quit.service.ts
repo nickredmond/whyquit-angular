@@ -26,8 +26,8 @@ export class WhyQuitService {
     return this.http.get<Victim[]>(this.getVictimCardsInfoPath());
   }
 
-  getEducationStories(): Observable<EducationStory[]> {
-    return this.http.get<EducationStory[]>(this.getEducationStoriesPath());
+  getEducationStories(pageNumber: number, size: number): Observable<EducationStory[]> {
+    return this.http.get<EducationStory[]>(this.getEducationStoriesPath(pageNumber, size));
   }
 
   private getTopStoriesPath(): string {
@@ -42,7 +42,7 @@ export class WhyQuitService {
     return environment.apiUrl + 'whyquit/too-young';
   }
 
-  private getEducationStoriesPath(): string {
-    return environment.apiUrl + 'whyquit/education';
+  private getEducationStoriesPath(pageNumber: number, size: number): string {
+    return environment.apiUrl + 'whyquit/education?pageNumber=' + pageNumber + '&size=' + size;
   }
 }

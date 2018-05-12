@@ -23,9 +23,9 @@
             <a href="/education" class="category-card-header">Education</a>
             <hr />
             <ul class="category-card-list">
-                <li><a class="category-card-link" href="http://whyquit.com/joel#video" target="_blank">Quitting: video lessons</a></li>
-                <li><a class="category-card-link" href="http://whyquit.com/whyquit/A_Symptoms.html" target="_blank">Withdrawal symptoms</a></li>
-                <li><a class="category-card-link" href="http://whyquit.com/Tips2007.pdf" target="_blank">Tips for recovery</a></li>
+                <li *ngFor="let educationStory of educationStories">
+                    <a class="category-card-link" [href]="educationStory.linkAddress" target="_blank">{{ educationStory.title }}</a>
+                </li>
             </ul>
         </div>
         <div class="col-sm-5 category-card right-category-card">

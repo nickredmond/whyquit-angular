@@ -1,0 +1,8 @@
+<div class="card story-card">
+  <img *ngIf="imageSource != null" class="card-img-top" [src]="imageSource" />
+  <div class="card-body">
+    <h5 class="card-title">{{ title }}</h5>
+    <p class="card-text">{{ description }}</p>
+    <p class="card-text"><a [href]="linkAddress" target="_blank">Read More ></a></p>
+  </div>
+</div>

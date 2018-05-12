@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { EducationStory } from '../shared/EducationStory';
 import { WhyQuitService } from '../services/why-quit/why-quit.service';
+import { environment } from '../../environments/environment';
 
 @Component({
   selector: 'app-education',
@@ -14,6 +15,10 @@ export class EducationComponent implements OnInit {
 
   ngOnInit() {
     this.getEducationStories();
+  }
+
+  getImageSource(imageFilename: string): string {
+    return (imageFilename == null) ? null : environment.apiUrl + "whyquit/images/education/" + imageFilename;
   }
 
   private getEducationStories() {

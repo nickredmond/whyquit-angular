@@ -6,6 +6,7 @@ import { environment } from '../../../environments/environment';
 import { SecondaryStory } from '../../shared/SecondaryStory';
 import { Victim } from '../../shared/Victim';
 import { EducationStory } from '../../shared/EducationStory';
+import { ResourceLink } from '../../shared/ResourceLink';
 
 @Injectable({
   providedIn: 'root'
@@ -30,6 +31,10 @@ export class WhyQuitService {
     return this.http.get<EducationStory[]>(this.getEducationStoriesPath(pageNumber, size));
   }
 
+  getResourceLinks(pageNumber: number, size: number): Observable<ResourceLink[]> {
+    return this.http.get<ResourceLink[]>(this.getResourceLinksPath(pageNumber, size));
+  };
+
   private getTopStoriesPath(): string {
     return environment.apiUrl + 'whyquit/top-stories';
   }
@@ -44,5 +49,9 @@ export class WhyQuitService {
 
   private getEducationStoriesPath(pageNumber: number, size: number): string {
     return environment.apiUrl + 'whyquit/education?pageNumber=' + pageNumber + '&size=' + size;
+  }
+
+  private getResourceLinksPath(pageNumber: number, size: number): string {
+    return environment.apiUrl + 'whyquit/resources?pageNumber=' + pageNumber + '&size=' + size;
   }
 }

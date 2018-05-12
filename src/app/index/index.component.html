@@ -32,7 +32,9 @@
             <span class="category-card-header">Resources</span>
             <hr />
             <ul class="category-card-list">
-                <li><a class="category-card-link" href="http://whyquit.com/whyquit/turkeys.html" target="_blank">Ex-smoker messages</a></li>
+                <li *ngFor="let resourceLink of resourceLinks">
+                    <a class="category-card-link" [href]="resourceLink.linkAddress" target="_blank">{{ resourceLink.title }}</a>
+                </li>
             </ul>
         </div>
     </div>

@@ -4,6 +4,7 @@ import { TopStory } from '../shared/TopStory';
 import { SecondaryStory } from '../shared/SecondaryStory';
 import { Victim } from '../shared/Victim';
 import { EducationStory } from '../shared/EducationStory';
+import { ResourceLink } from '../shared/ResourceLink';
 
 @Component({
   selector: 'app-index',
@@ -18,6 +19,7 @@ export class IndexComponent implements OnInit {
   secondaryStories: SecondaryStory[];
   victims: Victim[];
   educationStories: EducationStory[];
+  resourceLinks: ResourceLink[];
 
   constructor(private whyQuitService: WhyQuitService) {
     this.VICTIM_CARDS_PER_ROW = 3;
@@ -29,6 +31,7 @@ export class IndexComponent implements OnInit {
     this.getSecondaryStories();
     this.getVictimCardsInfo();
     this.getEducationStories();
+    this.getResourceLinks();
   }
 
   getVictimCardRowNumbers(): number[] {
@@ -65,5 +68,10 @@ export class IndexComponent implements OnInit {
   private getEducationStories(): void {
     this.whyQuitService.getEducationStories(1, 3)
       .subscribe(educationStories => this.educationStories = educationStories);
+  }
+
+  private getResourceLinks(): void {
+    this.whyQuitService.getResourceLinks(1, 3)
+      .subscribe(resourceLinks => this.resourceLinks = resourceLinks);
   }
 }

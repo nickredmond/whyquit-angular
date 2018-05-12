@@ -4,7 +4,7 @@ const path = require("path");
 
 app.use(express.static(__dirname + "/dist"));
 
-app.get("/*", function(request, response) {
+app.get("*", function(request, response) {
     response.sendFile(path.join(__dirname + "/dist/whyquit-angular/index.html"));
 });
 
